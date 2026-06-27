@@ -1,6 +1,7 @@
 # project_two
 
 A new Flutter project.
+hell yeah!! made my first flutter code!!
 
 ## Getting Started
 
