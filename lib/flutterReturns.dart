@@ -3,7 +3,15 @@ import 'dart:core';
 
 void main() {
   // ListMethod();
-  MapMethod();
+  // MapMethod();
+  // SetMethod();
+}
+
+void Methods() {
+  List <int> numbers = [1, 2, 3, 4, 5, 6];
+
+  print(numbers); // 1, 2, 3, 4, 5, 6
+  print(numbers[4]); // 5
 }
 
 void ListMethod() {
@@ -31,4 +39,13 @@ void MapMethod() {
 
   print(marks);
   print(marks["Maths"]); // 95
+}
+
+void SetMethod() {
+  Set<int> nums = {1, 2, 3, 4};
+
+  print(nums);
+
+  nums.add(5);
+  print(nums); // 1, 2, 3, 4, 5
 }
