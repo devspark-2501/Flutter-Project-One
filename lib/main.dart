@@ -5,7 +5,15 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xffff0000),
+        backgroundColor: Colors.blue,
+        appBar: AppBar(
+          title: Text("Hello Again"),
+        ),
+        body: Text(
+          "Hello World!",
+          style: TextStyle(color: Colors.red),
+
+        ),
       ),
     ),
   );
