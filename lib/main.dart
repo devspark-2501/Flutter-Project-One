@@ -9,10 +9,12 @@ void main() {
         appBar: AppBar(
           title: Text("Hello Again"),
         ),
-        body: Text(
-          "Hello World!",
-          style: TextStyle(color: Colors.red),
+        body: Center(
+          child: Text('Hello World',TextStyle: Colors.white)
 
+        // body: Text(
+        //   "Hello World!",
+        //   style: TextStyle(color: Colors.red),
 
         ),
       ),
