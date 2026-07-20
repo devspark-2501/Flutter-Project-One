@@ -10,12 +10,10 @@ void main() {
           title: Text("Hello Again"),
         ),
         body: Center(
-          child: Text('Hello World',TextStyle: Colors.white)
-
-        // body: Text(
-        //   "Hello World!",
-        //   style: TextStyle(color: Colors.red),
-
+          child: Text(
+            'Hello World',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
     ),
