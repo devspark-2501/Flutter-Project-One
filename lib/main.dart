@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
@@ -17,17 +15,16 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Column Practice'),
+        title: Text("Row Practice"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
 
             // Box 1
@@ -35,30 +32,36 @@ class HomeScreen extends StatelessWidget {
               height: 100,
               width: 100,
               color: Colors.red,
-              child: const Center(
-                child: Text(
-                  'Red Box',
-                  style: TextStyle(color: Colors.white),
-                )
+              child: Center(
+                child: Text("1"),
               ),
             ),
-
-            const SizedBox(height: 15),
 
             // Box 2
             Container(
               height: 100,
               width: 100,
-              color: Colors.blue,
-              child: const Center(
+              color: Colors.green,
+              child: Center(
                 child: Text(
-                  'Blue Box',
+                  "2",
                   style: TextStyle(color: Colors.white),
                 ),
               ),
             ),
 
-            const SizedBox(height: 15),
+            // Box 3
+            Container(
+              height: 100,
+              width: 100,
+              color: Colors.blue,
+              child: Center(
+                child: Text(
+                  "3",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
 
           ],
         ),
