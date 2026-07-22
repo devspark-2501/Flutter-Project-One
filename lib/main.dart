@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    Text('Hello, World',
-      textDirection: TextDirection.rtl,
-
-    ),
-
+    MyApp()
   );
+}
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp();
+  }
 }
