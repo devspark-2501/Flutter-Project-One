@@ -9,8 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -20,51 +20,33 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Row Practice"),
+        title: Text("Container Practice"),
       ),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-
-            // Box 1
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.red,
-              child: Center(
-                child: Text("1"),
+        child: Container(
+          height: 150,
+          width: 150,
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: Colors.purple,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black26,
+                blurRadius: 10,
+                offset: Offset(0, 5),
+              ),
+            ],
+          ),
+          child: Center(
+            child: Text(
+              "Hello",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
               ),
             ),
-
-            // Box 2
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.green,
-              child: Center(
-                child: Text(
-                  "2",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
-
-            // Box 3
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.blue,
-              child: Center(
-                child: Text(
-                  "3",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
-
-          ],
+          ),
         ),
       ),
     );
