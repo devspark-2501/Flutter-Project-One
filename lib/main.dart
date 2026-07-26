@@ -4,7 +4,6 @@ void main() {
   runApp(MyApp());
 }
 
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class HomeScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
-                color: Colors.black26,
+                color: Colors.black,
                 blurRadius: 10,
                 offset: Offset(0, 5),
               ),
@@ -48,7 +47,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      )
+    )
   }
 }
