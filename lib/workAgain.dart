@@ -23,8 +23,8 @@ class HomeScreen extends StatelessWidget {
       ),
 
       body: Padding(
-        padding: EdgeInsets.all(20), // ✅ fixed
-        child: Text('Body content'), // ✅ inside Padding
+        padding: EdgeInsets.all(20),
+        child: Text('Body content'),
       ),
 
       backgroundColor: Colors.black,
