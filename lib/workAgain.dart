@@ -21,7 +21,12 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Practice'),
       ),
-      body: Text('Body content'),
+
+      body: Padding(
+        padding: EdgeInsets.all(20), // ✅ fixed
+        child: Text('Body content'), // ✅ inside Padding
+      ),
+
       backgroundColor: Colors.black,
 
       floatingActionButton: FloatingActionButton(
@@ -30,6 +35,6 @@ class HomeScreen extends StatelessWidget {
         },
         child: Icon(Icons.add),
       ),
-    ); // THIS was missing
+    );
   }
 }
