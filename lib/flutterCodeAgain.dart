@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:project_two/main.dart';
 
 void main() {
-  runApp(MyApp);
+  runApp(MyApp()); // ✅ fixed
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       home: HomeScreen(),
       debugShowCheckedModeBanner: false,
@@ -19,7 +17,6 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text("Container Practice"),
