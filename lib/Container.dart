@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+// import 'package:project_two/flutterCodeAgain.dart';
 
 void main() {
-  runApp(MyApp()); // ✅ fixed
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return MaterialApp(
       home: HomeScreen(),
       debugShowCheckedModeBanner: false,
@@ -17,10 +19,12 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text("Container Practice"),
+        title: Text('Container Practice'),
       ),
+
       body: Center(
         child: Container(
           height: 150,
@@ -28,7 +32,7 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: Colors.purple,
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20)
             boxShadow: [
               BoxShadow(
                 color: Colors.black,
@@ -36,37 +40,20 @@ class HomeScreen extends StatelessWidget {
                 offset: Offset(0, 5),
               ),
             ],
+
+          ),
+
+        child: Center(
+          child: Text(
+            "Hello"
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+              ),
+            ),
           ),
         ),
       ),
     );
   }
 }
-
-// TextStyle
-// child: Text(
-//   'hello world',
-//   style: TextStyle(
-//     color: Colors.white,
-//     fontSize: 18,
-//   ),
-// ),
-
-// Container in the existing Code:]
-// Container(
-//   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-//   decoration: BoxDecoration(
-//     color: Colors.purple,
-//     borderRadius: BorderRadius.circular(20)
-//   ),
-//
-//   child: Text(
-//     'Hello World',
-//   style: TextStyle(
-//     color: Colors.white,
-//     fontWeight: FontWeight.bold,
-//   ),
-//   )
-// );
-
-
