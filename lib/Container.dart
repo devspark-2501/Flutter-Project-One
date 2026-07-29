@@ -113,3 +113,67 @@ class HomeScreen extends StatelessWidget {
 //     );
 //   }
 // }
+
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(AppCode());
+}
+
+class AppCode extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomeCode(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class HomeCode extends StatefulWidget {
+  @override
+  State<HomeCode> createState() => _HomeCodeState();
+}
+
+class _HomeCodeState extends State<HomeCode> {
+
+  // 🧠 Controller
+  TextEditingController nameController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Controller Example")),
+
+      body: Padding(
+        padding: EdgeInsets.all(20),
+
+        child: Column(
+          children: [
+
+            // 📝 Input Field
+            TextField(
+              controller: nameController,
+              decoration: InputDecoration(
+                labelText: "Name",
+                hintText: "Enter your name",
+                border: OutlineInputBorder(),
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            // 🔘 Button
+            ElevatedButton(
+              onPressed: () {
+                print(nameController.text); // 🔥 get value
+              },
+              child: Text("Submit"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
