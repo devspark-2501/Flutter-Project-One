@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
-// starter code
 void main() {
   runApp(AppCode());
 }
 
-// layer 1
 class AppCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeCode(),
@@ -17,11 +14,9 @@ class AppCode extends StatelessWidget {
   }
 }
 
-// layer 2
 class HomeCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.black,
 
@@ -30,10 +25,11 @@ class HomeCode extends StatelessWidget {
       ),
 
       body: Padding(
-        padding: EdgeInsetsGeometry.all(20),
+        padding: EdgeInsets.all(20),
 
         child: Column(
           children: [
+            // NAME
             TextField(
               keyboardType: TextInputType.text,
               style: TextStyle(color: Colors.black),
@@ -41,44 +37,40 @@ class HomeCode extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: "Enter your name",
                 labelText: "Name",
-
-                // prefixIcon: Icon(Icon.person),
-                // no icon rn!
-
                 filled: true,
                 fillColor: Colors.white,
-
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-                SizedBox(height: 15),
+            ),
 
+            SizedBox(height: 15),
 
-              TextField(
-                keyboardType: TextInputType.emailAddress,
-                obscureText: false,
+            // EMAIL
+            TextField(
+              keyboardType: TextInputType.emailAddress,
 
-                decoration: InputDecoration(
-                  labelText: "email",
-                  hintText: "email input",
-                  prefixIcon: Icon(Icon.Email),
-                  border: OutlineInputBorder(),
-                ),
+              decoration: InputDecoration(
+                labelText: "Email",
+                hintText: "email input",
+                prefixIcon: Icon(Icons.email),
+                border: OutlineInputBorder(),
               ),
-              SizedBox(height: 15),
+            ),
 
-              TextField(
-                keyboardType: TextInputType.number,
-                obscureText: false,
+            SizedBox(height: 15),
 
-                decoration: InputDecoration(
-                  labelText: "number",
-                  hintText: "mobile number",
-                  prefixIcon: Icon(Icon.Number),
-                  border: OutlineInputBorder(),
-                ),
-              )
+            // NUMBER
+            TextField(
+              keyboardType: TextInputType.number,
+
+              decoration: InputDecoration(
+                labelText: "Number",
+                hintText: "mobile number",
+                prefixIcon: Icon(Icons.phone),
+                border: OutlineInputBorder(),
+              ),
             ),
           ],
         ),
