@@ -42,3 +42,12 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+// TextStyle
+// child: Text(
+//   'hello world',
+//   style: TextStyle(
+//     color: Colors.white,
+//     fontSize: 18,
+//   ),
+// ),
