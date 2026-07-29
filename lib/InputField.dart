@@ -35,6 +35,7 @@ class HomeCode extends StatelessWidget {
         child: Column(
           children: [
             TextField(
+              keyboardType: TextInputType.text,
               style: TextStyle(color: Colors.black),
 
               decoration: InputDecoration(
@@ -51,6 +52,33 @@ class HomeCode extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
+                SizedBox(height: 15),
+
+
+              TextField(
+                keyboardType: TextInputType.emailAddress,
+                obscureText: false,
+
+                decoration: InputDecoration(
+                  labelText: "email",
+                  hintText: "email input",
+                  prefixIcon: Icon(Icon.Email),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: 15),
+
+              TextField(
+                keyboardType: TextInputType.number,
+                obscureText: false,
+
+                decoration: InputDecoration(
+                  labelText: "number",
+                  hintText: "mobile number",
+                  prefixIcon: Icon(Icon.Number),
+                  border: OutlineInputBorder(),
+                ),
+              )
             ),
           ],
         ),
