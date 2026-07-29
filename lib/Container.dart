@@ -57,3 +57,59 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
+// import 'package:flutter/material.dart';
+//
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: HomeScreen(),
+//     );
+//   }
+// }
+
+// class HomeScreen extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Colors.black,
+//
+//       appBar: AppBar(
+//         title: Text("TextField Practice"),
+//       ),
+//
+//       body: Padding(
+//         padding: EdgeInsets.all(20),
+//
+//         child: Column(
+//           children: [
+//             TextField(
+//               style: TextStyle(color: Colors.black),
+//
+//               decoration: InputDecoration(
+//                 hintText: "Enter your name",
+//                 labelText: "Name",
+//
+//                 prefixIcon: Icon(Icons.person),
+//
+//                 filled: true,
+//                 fillColor: Colors.white,
+//
+//                 border: OutlineInputBorder(
+//                   borderRadius: BorderRadius.circular(10),
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
