@@ -1,19 +1,24 @@
-// starter code
-// import 'package:flutter/cupertino.dart';
-
-// form (
-//   key: _formKey,
-//   child: Column(
-//     TextFromField(),
-//     ElevatedButton(
-//       onPressed: () {},
-//       child: Text('submit'),
-//     )
-//   )
-// )
-
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const MyApp());
+}
+
+// ROOT APP
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Form Demo',
+      home: const MyFormPage(),
+    );
+  }
+}
+
+// FORM PAGE
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
 
@@ -39,6 +44,7 @@ class _MyFormPageState extends State<MyFormPage> {
           child: Column(
             children: [
 
+              // NAME
               TextFormField(
                 controller: nameController,
                 decoration: const InputDecoration(
@@ -52,8 +58,12 @@ class _MyFormPageState extends State<MyFormPage> {
                 },
               ),
 
+              const SizedBox(height: 10),
+
+              // EMAIL
               TextFormField(
                 controller: emailController,
+                keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
                   labelText: "Email",
                 ),
@@ -65,6 +75,9 @@ class _MyFormPageState extends State<MyFormPage> {
                 },
               ),
 
+              const SizedBox(height: 10),
+
+              // PASSWORD
               TextFormField(
                 controller: passwordController,
                 obscureText: true,
@@ -81,12 +94,13 @@ class _MyFormPageState extends State<MyFormPage> {
 
               const SizedBox(height: 20),
 
+              // BUTTON
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    print(nameController.text);
-                    print(emailController.text);
-                    print(passwordController.text);
+                    print("Name: ${nameController.text}");
+                    print("Email: ${emailController.text}");
+                    print("Password: ${passwordController.text}");
                   }
                 },
                 child: const Text("Submit"),
