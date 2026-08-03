@@ -43,6 +43,13 @@ class _HomeCode extends State<HomeCode> {
                 text = "New Text";
               });
             },
+
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+              padding: EdgeInsets.all(15),
+            ),
+
             child: Text('Change'),
           ),
         ],
