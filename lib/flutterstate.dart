@@ -82,3 +82,23 @@ class _HomeCode extends State<HomeCode> {
 //     );
 //   }
 // }
+
+// Home_Screen
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Home")),
+
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // 👉 NAVIGATE
+            Navigator.pushNamed(context, '/about');
+          },
+          child: Text("Go to About"),
+        ),
+      ),
+    );
+  }
+}
