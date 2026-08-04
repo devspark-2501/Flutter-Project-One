@@ -57,3 +57,28 @@ class _HomeCode extends State<HomeCode> {
     );
   }
 }
+
+// Routes:
+
+// import 'package:flutter/material.dart'
+// import 'package:project_two/Container.dart';
+//
+// void main() {
+//   runApp(AppCode());
+// }
+//
+// class AppCode extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//
+//       routes: {
+//         '/': (context) => HomeScreen(),
+//         '/about': (context) => AboutScreen(),
+//       },
+//
+//     );
+//   }
+// }
