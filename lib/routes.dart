@@ -18,3 +18,45 @@ class AppCode extends StatelessWidget {
     );
   }
 }
+
+// Home_Screen Code
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(title: Text("Home")),
+      
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/About');
+          },
+        child: Text("Go to About"),
+        )
+      ),
+    );
+  }
+}
+
+// About_Screen Code
+class About_Screen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(title: Text('Home')),
+      
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/Home'),
+          },
+          
+          child: Text('Go to Home'),
+        )  
+            
+      ),
+    );
+  }
+}
